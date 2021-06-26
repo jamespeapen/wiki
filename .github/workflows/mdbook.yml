@@ -1,0 +1,33 @@
+name: mdbook 
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: get mdbook
+        run: |
+          wget https://github.com/rust-lang/mdBook/releases/download/v0.4.10/mdbook-v0.4.10-x86_64-unknown-linux-gnu.tar.gz 
+          tar xvf mdbook-v0.4.10-x86_64-unknown-linux-gnu.tar.gz 
+
+      - name: Build book
+        run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git checkout -b gh-pages
+          ./mdbook build -d docs
+          git add docs/ 
+          cid=$(git rev-parse --short "$GITHUB_SHA")
+          git commit -am "Deploy $cid to gh-pages"
+          git push origin HEAD:gh-pages --force
