@@ -18,8 +18,8 @@ jobs:
 
       - name: get mdbook
         run: |
-          wget https://github.com/rust-lang/mdBook/releases/download/v0.4.10/mdbook-v0.4.10-x86_64-unknown-linux-gnu.tar.gz 
-          tar xvf mdbook-v0.4.10-x86_64-unknown-linux-gnu.tar.gz 
+          wget https://github.com/rust-lang/mdBook/releases/download/v0.4.18/mdbook-v0.4.18-x86_64-unknown-linux-gnu.tar.gz 
+          tar xvf mdbook-v0.4.18-x86_64-unknown-linux-gnu.tar.gz 
 
       - name: Build book
         run: |
