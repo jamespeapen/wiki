@@ -9,6 +9,7 @@
   - [Utils]()
 
     - [jq](shell/utils/jq.md)
+    - [xdotool](shell/utils/xdotool.md)
 
 - [R]()
 
