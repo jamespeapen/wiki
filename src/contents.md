@@ -8,7 +8,7 @@
 
     - [jq](shell/utils/jq.md)
     - [xdotool](shell/utils/xdotool.md)
-
+  - [Cron](shell/cron.md)
 - R
 
   - [Plotting](r/plotting.md)
