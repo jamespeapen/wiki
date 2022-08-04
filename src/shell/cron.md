@@ -15,3 +15,6 @@ This job shows a notification every minute after getting the `DBUS_SESSION_BUS_A
 ```bash
 */1 * * * * eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gdm-x-session)/environ)"; notify-send "hello world"
 ```
+## Special characters
+
+`%` is a special cron character and needs to be escaped.
