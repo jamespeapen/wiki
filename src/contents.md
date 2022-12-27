@@ -8,6 +8,7 @@
 
   - [Utils]()
 
+    - [sed](shell/utils/sed.md)
     - [jq](shell/utils/jq.md)
     - [xdotool](shell/utils/xdotool.md)
 
