@@ -16,6 +16,7 @@
 - R
 
   - [Plotting](r/plotting.md)
+  - [Publishing](r/publishing.md)
 
 - Security
   - [TOTP generation](security/otp.md)
