@@ -13,6 +13,8 @@
     - [xdotool](shell/utils/xdotool.md)
 
   - [Cron](shell/cron.md)
+
+  - [Git](git/git.md)
 - R
 
   - [Plotting](r/plotting.md)
